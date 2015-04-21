@@ -22,3 +22,4 @@ changeColorBackgroundCircleProgress(stroke: UIColor?, fill: UIColor?)
 changeColorRealCircleProgress(stroke: UIColor?, fill: UIColor?)
 changeLineWidth(size: CGFloat)
 ```
+<a href="http://pl.tinypic.com?ref=15ph3jk" target="_blank"><img src="http://i57.tinypic.com/15ph3jk.png" border="0" alt="Image and video hosting by TinyPic"></a>
