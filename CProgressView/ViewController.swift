@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var progress = CProgressView(x: 100, y: 100, height: 200, width: 200)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Hello, world
+        
+        self.view.addSubview(progress.progressView)
+        progress.changeLineWidth(25)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderForChangeProgress(sender: UISlider) {
+        progress.updateProgressCircle(sender.value)
+    }
 
 }
 

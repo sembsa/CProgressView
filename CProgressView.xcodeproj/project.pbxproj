@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03028A2C1AE6BCCF00A4A9DD /* CProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03028A2B1AE6BCCF00A4A9DD /* CProgressView.swift */; };
 		037C6E851AE684B200BE4193 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6E841AE684B200BE4193 /* AppDelegate.swift */; };
 		037C6E871AE684B200BE4193 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6E861AE684B200BE4193 /* ViewController.swift */; };
 		037C6E8A1AE684B200BE4193 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037C6E881AE684B200BE4193 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03028A2B1AE6BCCF00A4A9DD /* CProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CProgressView.swift; sourceTree = "<group>"; };
 		037C6E7F1AE684B200BE4193 /* CProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037C6E831AE684B200BE4193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037C6E841AE684B200BE4193 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,11 +79,10 @@
 		037C6E811AE684B200BE4193 /* CProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				037C6E841AE684B200BE4193 /* AppDelegate.swift */,
+				03028A2B1AE6BCCF00A4A9DD /* CProgressView.swift */,
 				037C6E861AE684B200BE4193 /* ViewController.swift */,
 				037C6E881AE684B200BE4193 /* Main.storyboard */,
 				037C6E8B1AE684B200BE4193 /* Images.xcassets */,
-				037C6E8D1AE684B200BE4193 /* LaunchScreen.xib */,
 				037C6E821AE684B200BE4193 /* Supporting Files */,
 			);
 			path = CProgressView;
@@ -90,6 +91,8 @@
 		037C6E821AE684B200BE4193 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				037C6E841AE684B200BE4193 /* AppDelegate.swift */,
+				037C6E8D1AE684B200BE4193 /* LaunchScreen.xib */,
 				037C6E831AE684B200BE4193 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				037C6E871AE684B200BE4193 /* ViewController.swift in Sources */,
+				03028A2C1AE6BCCF00A4A9DD /* CProgressView.swift in Sources */,
 				037C6E851AE684B200BE4193 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				037C6EA01AE684B200BE4193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		037C6EA11AE684B200BE4193 /* Build configuration list for PBXNativeTarget "CProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				037C6EA31AE684B200BE4193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
