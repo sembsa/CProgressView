@@ -57,6 +57,7 @@ class CProgressView {
         realProgressCircle.strokeEnd = CGFloat(status)
     }
     
+    // Update look :)
     func changeColorBackgroundCircleProgress(stroke: UIColor?, fill: UIColor?) {
         progressCircle.strokeColor = stroke!.CGColor
         progressCircle.fillColor = fill!.CGColor
