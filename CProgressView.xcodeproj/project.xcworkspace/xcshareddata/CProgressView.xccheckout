@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A3ADE4AB-7C2A-4854-B50B-A1B73038F351</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DAA086D2CA40BF62D105A82A60F1DBEC604FB79B</key>
+		<string>https://github.com/sembsa/CProgressView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CProgressView.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DAA086D2CA40BF62D105A82A60F1DBEC604FB79B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sembsa/CProgressView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DAA086D2CA40BF62D105A82A60F1DBEC604FB79B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DAA086D2CA40BF62D105A82A60F1DBEC604FB79B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CProgressView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
