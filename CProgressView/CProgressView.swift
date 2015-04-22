@@ -69,6 +69,7 @@ class CProgressView {
         realProgressCircle.fillColor = fill!.CGColor
     }
     
+    // Change width line
     func changeLineWidth(size: CGFloat) {
         progressCircle.lineWidth = size
         realProgressCircle.lineWidth = size + 0.1
