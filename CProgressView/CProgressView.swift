@@ -10,6 +10,7 @@ import UIKit
 
 class CProgressView {
     
+    // Private var and method
     private var π: CGFloat = CGFloat(M_PI)
     
     private func arc(arc: CGFloat) -> CGFloat {
@@ -19,9 +20,12 @@ class CProgressView {
     
     private var progressCircle = CAShapeLayer()
     private var realProgressCircle = CAShapeLayer()
-    var progressView = UIView()
     private var circlePath = UIBezierPath()
     
+    // Public var and method
+    var progressView = UIView()
+    
+    // Init method
     init(x: CGFloat, y: CGFloat, height: CGFloat, width: CGFloat) {
         
         // Make frame for UIView
