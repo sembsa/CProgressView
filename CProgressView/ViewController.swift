@@ -9,13 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var progress = CProgressView(x: 100, y: 100, height: 200, width: 200)
+    
+    @IBOutlet weak var widoczek: UIView!
+    
+    var progress = CProgressView(x: 0, y: 0, height: 200, width: 200)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(progress.progressView)
+        widoczek.addSubview(progress.progressView)
         progress.changeLineWidth(25)
     }
 
@@ -28,4 +30,3 @@ class ViewController: UIViewController {
     }
 
 }
-

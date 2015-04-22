@@ -13,13 +13,14 @@ class CProgressView {
     private var π: CGFloat = CGFloat(M_PI)
     
     private func arc(arc: CGFloat) -> CGFloat {
-        let wynik = ( π * arc ) / 180
-        return wynik
+        let results = ( π * arc ) / 180
+        return results
     }
     
     private var progressCircle = CAShapeLayer()
     private var realProgressCircle = CAShapeLayer()
     var progressView = UIView()
+    private var circlePath = UIBezierPath()
     
     init(x: CGFloat, y: CGFloat, height: CGFloat, width: CGFloat) {
         
@@ -29,7 +30,7 @@ class CProgressView {
         // Create Path for ARC
         let centerPointArc = CGPoint(x: progressView.frame.size.width / 2, y: progressView.frame.size.height / 2)
         let radiusArc: CGFloat = progressView.frame.width / 2 * 0.8
-        var circlePath = UIBezierPath(arcCenter: centerPointArc, radius: radiusArc, startAngle: arc(0), endAngle: arc(360), clockwise: true)
+        circlePath = UIBezierPath(arcCenter: centerPointArc, radius: radiusArc, startAngle: arc(0), endAngle: arc(360), clockwise: true)
         
         // Define background circle progress
         progressCircle.path = circlePath.CGPath
@@ -63,7 +64,7 @@ class CProgressView {
         progressCircle.fillColor = fill!.CGColor
     }
     
-    func changeColorRealCircleProgress(stroke: UIColor?, fill: UIColor?) {
+    func changeColorRealCircleProgress( stroke: UIColor?, fill: UIColor?) {
         realProgressCircle.strokeColor = stroke!.CGColor
         realProgressCircle.fillColor = fill!.CGColor
     }

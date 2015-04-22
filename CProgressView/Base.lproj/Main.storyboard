@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,13 @@
                                     <action selector="sliderForChangeProgress:" destination="vXZ-lx-hvc" eventType="valueChanged" id="6eh-qN-keK"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciU-rI-nYE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="200" height="200"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -33,6 +41,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="drj-Gj-JZx"/>
+                                <exclude reference="ciU-rI-nYE"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1RX-4a-zab"/>
@@ -43,6 +52,7 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="drj-Gj-JZx"/>
+                                <include reference="ciU-rI-nYE"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1RX-4a-zab"/>
@@ -51,6 +61,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="widoczek" destination="ciU-rI-nYE" id="uSX-4L-AwM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
