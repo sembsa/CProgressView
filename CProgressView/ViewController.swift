@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Create IBOutlet
     @IBOutlet weak var viewForTest: CProgressView!
     
     override func viewDidLoad() {
