@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +32,11 @@
                                     <constraint firstAttribute="width" constant="200" id="364-aG-UHq"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="valueProgress">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
@@ -64,12 +68,12 @@
                                 <exclude reference="kyz-aw-DAL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1lI-a9-LaO"/>
-                                <exclude reference="ihw-P6-XXD"/>
+                                <exclude reference="Fvl-mc-Iph"/>
                                 <exclude reference="2tr-Rt-cuj"/>
                                 <exclude reference="3XI-XO-9dc"/>
                                 <exclude reference="XMO-Us-YYs"/>
-                                <exclude reference="Fvl-mc-Iph"/>
+                                <exclude reference="1lI-a9-LaO"/>
+                                <exclude reference="ihw-P6-XXD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -78,12 +82,12 @@
                                 <include reference="kyz-aw-DAL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1lI-a9-LaO"/>
-                                <include reference="ihw-P6-XXD"/>
+                                <include reference="Fvl-mc-Iph"/>
                                 <include reference="2tr-Rt-cuj"/>
                                 <include reference="3XI-XO-9dc"/>
                                 <include reference="XMO-Us-YYs"/>
-                                <include reference="Fvl-mc-Iph"/>
+                                <include reference="1lI-a9-LaO"/>
+                                <include reference="ihw-P6-XXD"/>
                             </mask>
                         </variation>
                     </view>

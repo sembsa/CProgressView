@@ -25,6 +25,7 @@ import UIKit
     // Variables for IBInspectable
     @IBInspectable var circleColor: UIColor = UIColor.grayColor()
     @IBInspectable var progressColor: UIColor = UIColor.greenColor()
+    @IBInspectable var lineWidth: Float = Float(3.0)
     @IBInspectable var valueProgress: Float = Float()
     
     override func drawRect(rect: CGRect) {
@@ -38,7 +39,7 @@ import UIKit
         progressCircle.path = circlePath.CGPath
         progressCircle.strokeColor = circleColor.CGColor
         progressCircle.fillColor = UIColor.clearColor().CGColor
-        progressCircle.lineWidth = 10
+        progressCircle.lineWidth = CGFloat(lineWidth)
         progressCircle.strokeStart = 0
         progressCircle.strokeEnd = 100
 
@@ -46,7 +47,7 @@ import UIKit
         realProgressCircle.path = circlePath.CGPath
         realProgressCircle.strokeColor = progressColor.CGColor
         realProgressCircle.fillColor = UIColor.clearColor().CGColor
-        realProgressCircle.lineWidth = 10.1
+        realProgressCircle.lineWidth = CGFloat(lineWidth) + 0.1
         realProgressCircle.strokeStart = 0
         realProgressCircle.strokeEnd = CGFloat(valueProgress) / 100
 
