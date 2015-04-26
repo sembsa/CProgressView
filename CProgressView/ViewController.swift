@@ -10,23 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var widoczek: UIView!
-    
-    var progress = CProgressView(x: 0, y: 0, height: 200, width: 200)
+    @IBOutlet weak var viewForTest: CProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        widoczek.addSubview(progress.progressView)
-        progress.changeLineWidth(25)
+        println("Hello everybody :)")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func sliderForChangeValue(sender: UISlider) {
+        viewForTest.updateProgressCircle(sender.value)
     }
-
-    @IBAction func sliderForChangeProgress(sender: UISlider) {
-        progress.updateProgressCircle(sender.value)
-    }
-
 }

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,51 +17,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="drj-Gj-JZx">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="drj-Gj-JZx">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <connections>
-                                    <action selector="sliderForChangeProgress:" destination="vXZ-lx-hvc" eventType="valueChanged" id="6eh-qN-keK"/>
+                                    <action selector="sliderForChangeValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8t3-AP-WPe"/>
                                 </connections>
                             </slider>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciU-rI-nYE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyz-aw-DAL" customClass="CProgressView" customModule="CProgressView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2sf-so-YrN"/>
+                                    <constraint firstAttribute="width" constant="200" id="364-aG-UHq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueProgress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2sf-so-YrN"/>
+                                        <exclude reference="364-aG-UHq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2sf-so-YrN"/>
+                                        <include reference="364-aG-UHq"/>
+                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="drj-Gj-JZx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="504" id="1RX-4a-zab"/>
-                            <constraint firstItem="drj-Gj-JZx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="4CH-G6-DFw"/>
-                            <constraint firstItem="drj-Gj-JZx" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="oaJ-yS-vxy"/>
+                            <constraint firstAttribute="centerX" secondItem="kyz-aw-DAL" secondAttribute="centerX" id="1lI-a9-LaO"/>
+                            <constraint firstItem="drj-Gj-JZx" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="2tr-Rt-cuj"/>
+                            <constraint firstAttribute="centerX" secondItem="drj-Gj-JZx" secondAttribute="centerX" id="3XI-XO-9dc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="drj-Gj-JZx" secondAttribute="bottom" constant="46" id="Fvl-mc-Iph"/>
+                            <constraint firstItem="drj-Gj-JZx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XMO-Us-YYs"/>
+                            <constraint firstItem="kyz-aw-DAL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ihw-P6-XXD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="drj-Gj-JZx"/>
-                                <exclude reference="ciU-rI-nYE"/>
+                                <exclude reference="kyz-aw-DAL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1RX-4a-zab"/>
-                                <exclude reference="4CH-G6-DFw"/>
-                                <exclude reference="oaJ-yS-vxy"/>
+                                <exclude reference="1lI-a9-LaO"/>
+                                <exclude reference="ihw-P6-XXD"/>
+                                <exclude reference="2tr-Rt-cuj"/>
+                                <exclude reference="3XI-XO-9dc"/>
+                                <exclude reference="XMO-Us-YYs"/>
+                                <exclude reference="Fvl-mc-Iph"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="drj-Gj-JZx"/>
-                                <include reference="ciU-rI-nYE"/>
+                                <include reference="kyz-aw-DAL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1RX-4a-zab"/>
-                                <include reference="4CH-G6-DFw"/>
-                                <include reference="oaJ-yS-vxy"/>
+                                <include reference="1lI-a9-LaO"/>
+                                <include reference="ihw-P6-XXD"/>
+                                <include reference="2tr-Rt-cuj"/>
+                                <include reference="3XI-XO-9dc"/>
+                                <include reference="XMO-Us-YYs"/>
+                                <include reference="Fvl-mc-Iph"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="widoczek" destination="ciU-rI-nYE" id="uSX-4L-AwM"/>
+                        <outlet property="viewForTest" destination="kyz-aw-DAL" id="rKs-a0-aUR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
