@@ -14,6 +14,7 @@ Circle Progress for iOS - Swift
 ```
 
 ### Available method:
+####You can put a picture in the middle
 ```Swift
 updateProgressCircle(status: Float)
 resetProgressCircle()
