@@ -1,25 +1,25 @@
 ## CProgressView
 Circle Progress for iOS - Swift
 
-1. Add to you project „CProgressView.swift”
-2. Add new object
+1. Add View in Interface Builder
+2. Set Class "CProgressView"                                      
+<a href="http://imgur.com/Alm5pmu"><img src="http://i.imgur.com/Alm5pmu.png" title="source: imgur.com" /></a>
 
-### Example:
+3. Manage CProgressView in Interface Builder
+<a href="http://imgur.com/wKzhMMP"><img src="http://i.imgur.com/wKzhMMP.png" title="source: imgur.com" /></a>
 
-```    
-var progress = CProgressView(x: 100, y: 100, height: 200, width: 200)
-   
-override func viewDidLoad() {
-    super.viewDidLoad()
-   
-    self.view.addSubview(progress.progressView)
-}
+4. Set in code @IBOutlet
+```Swift
+@IBOutlet weak var viewForTest: CProgressView!
 ```
+
 ### Available method:
-```
+```Swift
 updateProgressCircle(status: Float)
+resetProgressCircle()
 changeColorBackgroundCircleProgress(stroke: UIColor?, fill: UIColor?)
 changeColorRealCircleProgress(stroke: UIColor?, fill: UIColor?)
 changeLineWidth(size: CGFloat)
 ```
-<a href="http://pl.tinypic.com?ref=15ph3jk" target="_blank"><img src="http://i57.tinypic.com/15ph3jk.png" border="0" alt="Image and video hosting by TinyPic"></a>
+### Screenshot
+<a href="http://imgur.com/wyTldWH"><img src="http://i.imgur.com/wyTldWH.png" title="source: imgur.com" /></a>
