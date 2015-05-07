@@ -74,6 +74,7 @@ import UIKit
     
     func resetProgressCircle() {
         realProgressCircle.strokeEnd = CGFloat(0.0)
+    }
 
     // Method for update look :)
     func changeColorBackgroundCircleProgress(stroke: UIColor?, fill: UIColor?) {
