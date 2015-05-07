@@ -10,15 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Create IBOutlet
+    // Only for example
+    @IBOutlet weak var labelShowProgress: UILabel!
+    @IBOutlet weak var widthStepperOutlet: UIStepper!
+    
+    // Create IBOutlet for CProgressView
     @IBOutlet weak var viewForTest: CProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         println("Hello everybody :)")
+        //viewForTest.image = UIImage(named: "Intel")!
+        widthStepperOutlet.value = Double(viewForTest.lineWidth)
     }
 
     @IBAction func sliderForChangeValue(sender: UISlider) {
         viewForTest.updateProgressCircle(sender.value)
+        labelShowProgress.text = String(viewForTest.statusProgress) + "%"
     }
+    
+    @IBAction func widthStepper(sender: UIStepper) {
+        viewForTest.changeLineWidth(CGFloat(sender.value))
+    }
+    
+    
 }

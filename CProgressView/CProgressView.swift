@@ -15,6 +15,7 @@ import UIKit
     private var progressCircle = CAShapeLayer()
     private var realProgressCircle = CAShapeLayer()
     private var circlePath = UIBezierPath()
+    internal var statusProgress: Int = Int()
 
     // Method for calculate ARC
     private func arc(arc: CGFloat) -> CGFloat {
@@ -27,6 +28,8 @@ import UIKit
     @IBInspectable var progressColor: UIColor = UIColor.greenColor()
     @IBInspectable var lineWidth: Float = Float(3.0)
     @IBInspectable var valueProgress: Float = Float()
+    @IBInspectable var imageView: UIImageView = UIImageView()
+    @IBInspectable var image: UIImage?
     
     override func drawRect(rect: CGRect) {
 
@@ -50,7 +53,14 @@ import UIKit
         realProgressCircle.lineWidth = CGFloat(lineWidth) + 0.1
         realProgressCircle.strokeStart = 0
         realProgressCircle.strokeEnd = CGFloat(valueProgress) / 100
-
+        
+        // UIImageView
+        imageView.frame = CGRect(origin: CGPoint(x: circlePath.bounds.minX, y: circlePath.bounds.minY), size: CGSize(width: circlePath.bounds.width, height: circlePath.bounds.height))
+        imageView.image = image
+        imageView.layer.cornerRadius = radiusArc
+        imageView.layer.masksToBounds = true
+        addSubview(imageView)
+        
         // Set for sublayer circle progress
         layer.addSublayer(progressCircle)
         layer.addSublayer(realProgressCircle)
@@ -58,8 +68,12 @@ import UIKit
     
     // Method for update status progress
     func updateProgressCircle(status: Float) {
+        statusProgress = Int(status)
         realProgressCircle.strokeEnd = CGFloat(status) / 100
     }
+    
+    func resetProgressCircle() {
+        realProgressCircle.strokeEnd = CGFloat(0.0)
 
     // Method for update look :)
     func changeColorBackgroundCircleProgress(stroke: UIColor?, fill: UIColor?) {

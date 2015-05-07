@@ -79,8 +79,8 @@
 		037C6E811AE684B200BE4193 /* CProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				03028A2B1AE6BCCF00A4A9DD /* CProgressView.swift */,
 				037C6E861AE684B200BE4193 /* ViewController.swift */,
+				03028A2B1AE6BCCF00A4A9DD /* CProgressView.swift */,
 				037C6E881AE684B200BE4193 /* Main.storyboard */,
 				037C6E8B1AE684B200BE4193 /* Images.xcassets */,
 				037C6E821AE684B200BE4193 /* Supporting Files */,
